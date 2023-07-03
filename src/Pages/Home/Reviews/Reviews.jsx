@@ -19,7 +19,7 @@ const Reviews = () => {
         })
     },[])
   return (
-    <section className="my-20">
+    <section className="my-20  bg-pink-600 text-white">
       <SectionTitle
         heading={"Reviews"}
         subHeading={"What Out Client Says"}

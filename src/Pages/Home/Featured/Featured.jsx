@@ -6,7 +6,7 @@ const Featured = () => {
     return (
        <>
        <SectionTitle heading={'featured items'} subHeading={'Check It Out'}></SectionTitle>
-        <div className='featured-item bg-no-repeat bg-cover  bg-fixed'>
+        <div className='featured-item bg-no-repeat bg-cover   bg-fixed'>
             
             <div className='md:flex items-center justify-center bg-slate-400 bg-opacity-30 pl-12 pr-12 pt-8 pb-8'>
             <div className=''>
@@ -16,7 +16,7 @@ const Featured = () => {
                 <p className='text-xl'>September 20, 2023</p>
                 <p className='uppercase font-semibold'>Where can i get some?</p>
                 <p className=''>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br></br> Odit doloremque saepe sed reiciendis ex exercitationem<br></br> eius obcaecati ipsam eligendi sit dignissimos numquam itaque,<br></br> facilis veniam magni nihil nesciunt autem impedit.</p>
-                <button className='btn btn-outline border-0 border-b-2 mt-4 text-white'>Order Now</button>
+                <button className='btn btn-outline border-0 border-b-2 border-pink-600 hover:bg-pink-600 mt-4 text-white'>Order Now</button>
             </div>
             </div>
         </div>

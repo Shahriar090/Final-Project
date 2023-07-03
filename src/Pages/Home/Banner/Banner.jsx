@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const Banner = () => {
     return (
-        <div className=' w-9/12 mx-auto pt-24'>
+        <div className=' w-9/12 mx-auto pt-24  bg-pink-600'>
             <div className='text-center '>
             <Carousel infiniteLoop interval={3000}>
                 <div>

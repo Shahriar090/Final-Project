@@ -68,7 +68,7 @@ import Marquee from "react-fast-marquee";
 
 const Category = () => {
   return (
-    <section className="w-9/12 mx-auto">
+    <section className="w-9/12 mx-auto  bg-pink-600 text-white">
       <SectionTitle heading={'Order Online'} subHeading={'From 11:00am To 10:00pm'}></SectionTitle>
 
       <Marquee pauseOnHover>

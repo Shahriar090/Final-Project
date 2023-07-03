@@ -2,6 +2,7 @@ import SectionTitle from "../../../Components/SectionTitle";
 
 import MenuItem from "../../../Shared/MenuItem/MenuItem";
 import UseMenu from "../../../Hooks/UseMenu";
+import { useState } from "react";
 
 const PopularMenu = () => {
   const [_id, setId] = useState(null);
@@ -9,7 +10,7 @@ const PopularMenu = () => {
   const popular = menu.filter((item) => item.category === "popular");
 
   return (
-    <section className="mb-6">
+    <section className="mb-6  bg-pink-600 text-white">
       <SectionTitle
         heading={"From Our Menu"}
         subHeading={"Popular Items"}
@@ -20,6 +21,9 @@ const PopularMenu = () => {
           <MenuItem key={_id} item={item}></MenuItem>
         ))}
       </div>
+     <div className="text-center">
+     <button className='btn btn-outline  border-white hover:bg-pink-600 mt-5 mb-4 text-white'>View Full Menu</button>
+     </div>
     </section>
   );
 };

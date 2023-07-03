@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link>Home</Link>
       </li>
       <li className="text-xl font-semibold hover:bg-slate-200">
-        <Link>Contact Us</Link>
+        <Link to='/order'>Order</Link>
       </li>
       <li className="text-xl font-semibold hover:bg-slate-200">
         <Link>Dashboard</Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar fixed z-30 bg-opacity-40 bg-black text-white ">
+    <div className="navbar fixed z-30 bg-opacity-80 bg-pink-600 text-white ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
