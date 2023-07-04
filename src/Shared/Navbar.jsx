@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link to='/menu'>Our Menu</Link>
       </li>
       <li className="text-xl font-semibold hover:bg-slate-200">
-        <Link>Our Shop</Link>
+        <Link to='/login'>Login</Link>
       </li>
     </>
   );

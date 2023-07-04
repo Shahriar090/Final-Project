@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuItem from '../../../Shared/MenuItem/MenuItem';
+import { Link } from 'react-router-dom';
 
 const MenuCategory = ({items}) => {
     return (
@@ -9,6 +10,11 @@ const MenuCategory = ({items}) => {
           <MenuItem  item={item}></MenuItem>
         ))}
       </div>
+     <div className='text-center lg:text-start ml-5'>
+     <Link to='/order'>
+      <button className="btn btn-outline border-0 border-b-2 border-pink-600 hover:bg-pink-600">Order Now</button>
+      </Link>
+     </div>
         </div>
     );
 };
