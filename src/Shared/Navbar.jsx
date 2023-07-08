@@ -1,24 +1,56 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
+import {FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const navOptions = (
     <>
       <li className="text-xl font-semibold hover:bg-slate-200">
         <Link>Home</Link>
       </li>
       <li className="text-xl font-semibold hover:bg-slate-200">
-        <Link to='/order'>Order</Link>
+        <Link to="/order">Order</Link>
       </li>
       <li className="text-xl font-semibold hover:bg-slate-200">
         <Link>Dashboard</Link>
       </li>
       <li className="text-xl font-semibold hover:bg-slate-200">
-        <Link to='/menu'>Our Menu</Link>
+        <Link to="/menu">Our Menu</Link>
       </li>
       <li className="text-xl font-semibold hover:bg-slate-200">
-        <Link to='/login'>Login</Link>
+        <Link to="/secret">Secret</Link>
       </li>
+      <li>
+        <Link>
+          <button className="btn">
+            <FaShoppingCart></FaShoppingCart>
+            <div className="badge badge-secondary">+0</div>
+          </button>
+        </Link>
+      </li>
+
+      {user ? (
+        <>
+          {" "}
+          <button onClick={handleLogout} className="btn btn-ghost">
+            LogOut
+          </button>
+        </>
+      ) : (
+        <>
+          {" "}
+          <li className="text-xl font-semibold hover:bg-slate-200">
+            <Link to="/login">Login</Link>
+          </li>
+        </>
+      )}
     </>
   );
   return (
